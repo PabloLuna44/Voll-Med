@@ -29,4 +29,14 @@ public class Address {
 
     }
 
+    public void update(DataAddress dataAddress){
+        this.street=dataAddress.street();
+        this.state=dataAddress.state();
+        this.city=dataAddress.city();
+        this.district=dataAddress.district();
+        this.number=dataAddress.number();
+        this.complement=dataAddress.complement();
+
+    }
+
 }

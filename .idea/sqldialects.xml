@@ -3,5 +3,6 @@
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/api/src/main/resources/db/migration/V1__create-table-doctors.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/api/src/main/resources/db/migration/V2__alter-table-doctors.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/api/src/main/resources/db/migration/V3__alter-table-doctors-active.sql" dialect="MySQL" />
   </component>
 </project>

@@ -23,9 +23,24 @@ public class DoctorService {
     }
 
     public Page<DoctorDTO> findAll(Pageable pageable){
-        return doctorRepository.findAll(pageable).map(DoctorDTO::new);
+        return doctorRepository.findByActiveTrue(pageable).map(DoctorDTO::new);
+    }
+     public void edit(DoctorUpdateDTO doctorUpdateDTO){
+        Doctor doctor =doctorRepository.getReferenceById(doctorUpdateDTO.id());
+        doctor.update(doctorUpdateDTO);
     }
 
+    //SOFT DELETE
+    public void delete(Long id){
+        Doctor doctor = doctorRepository.getReferenceById(id);
+        doctor.updateActive();
+    }
+
+// DELETE EN BASE DE DATOS
+//    public void delete(Long id){
+//        Doctor doctor = doctorRepository.getReferenceById(id);
+//        doctorRepository.delete(doctor);
+//    }
 
 
 

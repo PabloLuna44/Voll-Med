@@ -1,8 +1,9 @@
 package med.voll.api.doctor;
 
-import javax.print.Doc;
+
 
 public record DoctorDTO(
+        Long id,
         String name,
         Specialty specialty,
         String email,
@@ -12,6 +13,7 @@ public record DoctorDTO(
 
     public DoctorDTO(Doctor doctor){
         this(
+                doctor.getId(),
                 doctor.getName(),
                 doctor.getSpecialty(),
                 doctor.getEmail(),
