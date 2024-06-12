@@ -1,6 +1,6 @@
-package med.voll.api.doctor;
+package med.voll.api.domain.doctor;
 
-import med.voll.api.address.DataAddress;
+import med.voll.api.domain.address.DataAddress;
 
 public record DoctorUpdateDTO(
         Long id,
@@ -8,4 +8,5 @@ public record DoctorUpdateDTO(
         String document,
         DataAddress address
 ) {
-}
+    }
+
