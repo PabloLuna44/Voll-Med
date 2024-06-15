@@ -4,4 +4,5 @@ public record UserAuthenticationDTO(
         String email,
          String password
 ) {
+
 }
