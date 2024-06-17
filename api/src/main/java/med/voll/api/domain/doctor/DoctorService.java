@@ -15,7 +15,7 @@ public class DoctorService {
 
 
 
-    public Doctor save(DataDoctor doctor) {
+    public Doctor save(DataPatient doctor) {
        return doctorRepository.save(new Doctor(doctor));
     }
 

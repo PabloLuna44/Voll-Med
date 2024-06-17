@@ -24,7 +24,7 @@ public class DoctorController {
     DoctorService doctorService;
 
     @PostMapping
-    public ResponseEntity<DoctorResponseDTO> save(@RequestBody @Valid DataDoctor parameter, UriComponentsBuilder uriComponentsBuilder){
+    public ResponseEntity<DoctorResponseDTO> save(@RequestBody @Valid DataPatient parameter, UriComponentsBuilder uriComponentsBuilder){
         Doctor doctor=doctorService.save(parameter);
         DoctorResponseDTO doctorResponseDTO=new DoctorResponseDTO(doctor);
 

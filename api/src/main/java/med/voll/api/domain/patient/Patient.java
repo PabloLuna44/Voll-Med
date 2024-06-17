@@ -1,17 +1,20 @@
-package med.voll.api.domain.doctor;
+package med.voll.api.domain.patient;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import med.voll.api.domain.address.Address;
 
 
 @Entity
-@Table(name="doctors")
+@Table(name="patients")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @EqualsAndHashCode(of="id")
-public class Doctor {
+public class Patient {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,33 +22,26 @@ public class Doctor {
     private String name;
     private String email;
     private String phone;
-    private String document;
     private Boolean active;
     @Enumerated(EnumType.STRING)
-    private Specialty specialty;
 
     @Embedded
     private Address address;
 
 
-    public Doctor(DataPatient dataDoctor){
+    public Patient(DataPatient dataPatient){
         this.active=true;
-        this.name=dataDoctor.name();
-        this.email=dataDoctor.email();
-        this.phone=dataDoctor.phone();
-        this.document=dataDoctor.document();
-        this.specialty=dataDoctor.specialty();
-        this.address=new Address(dataDoctor.address());
+        this.name=dataPatient.name();
+        this.email=dataPatient.email();
+        this.phone=dataPatient.phone();
+        this.address=new Address(dataPatient.address());
     }
 
 
-    public void update(DoctorUpdateDTO dataDoctor){
+    public void update(PatientUpdateDTO dataDoctor){
 
         if(dataDoctor.name() != null){
             this.name=dataDoctor.name();
-        }
-        if(dataDoctor.document()!=null){
-            this.document=dataDoctor.document();
         }
         if(dataDoctor.address()!=null){
             this.address.update(dataDoctor.address());
