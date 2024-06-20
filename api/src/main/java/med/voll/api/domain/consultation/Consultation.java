@@ -29,8 +29,8 @@ public class Consultation {
     private Patient patient;
 
 
-    private LocalDateTime date;
-    
+    private LocalDateTime consultationDate;
+
 
 
 }
