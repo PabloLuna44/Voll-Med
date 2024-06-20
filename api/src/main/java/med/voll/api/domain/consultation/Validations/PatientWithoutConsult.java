@@ -17,7 +17,7 @@ public class PatientWithoutConsult implements ConsultValidator{
         var openHour=consultationDTO.consultationDate().withHour(7);
         var closeHour=consultationDTO.consultationDate().withHour(18);
 
-        var patient=consultationRepository.existsByPatientIdAndConsultationDateBetween(consultationDTO.patientId(),openHour,closeHour);
+        var patient=consultationRepository.existsByPatientIdAndConsultationDateBetweenAndActiveTrue(consultationDTO.patientId(),openHour,closeHour);
 
         if(patient){
             throw new ValidationException("Do not allow consultation with the same patient on the same day.");

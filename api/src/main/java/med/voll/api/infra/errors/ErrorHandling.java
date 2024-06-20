@@ -3,7 +3,6 @@ package med.voll.api.infra.errors;
 
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.ValidationException;
-
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -39,7 +38,6 @@ public class ErrorHandling {
         var error=new ValidationError("Parameter",e.getMessage());
         return ResponseEntity.badRequest().body(error);
     }
-
 
 
     private record ValidationError(String field, String message) {

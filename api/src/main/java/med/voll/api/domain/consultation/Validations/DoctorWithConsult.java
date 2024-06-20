@@ -19,7 +19,7 @@ public class DoctorWithConsult implements ConsultValidator{
             return;
         }
 
-        var doctorWithConsult=consultationRepository.existsByDoctorIdAndConsultationDate(consultationDTO.doctorId(),consultationDTO.consultationDate());
+        var doctorWithConsult=consultationRepository.existsByDoctorIdAndConsultationDateAndActiveTrue(consultationDTO.doctorId(),consultationDTO.consultationDate());
 
         if(doctorWithConsult){
 

@@ -27,10 +27,24 @@ public class Consultation {
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Patient patient;
+    private Boolean active;
 
+    @Enumerated(EnumType.STRING)
+    private Reason reason;
 
     private LocalDateTime consultationDate;
 
 
+    public Consultation(Doctor doctor, Patient patient, LocalDateTime localDateTime) {
+        this.active=true;
+        this.doctor=doctor;
+        this.patient=patient;
+        this.consultationDate=localDateTime;
+    }
 
+
+    public void cancel(Boolean active,Reason reason){
+        this.active=active;
+        this.reason=reason;
+    }
 }

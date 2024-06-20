@@ -3,6 +3,7 @@ package med.voll.api.domain.consultation;
 
 
 import jakarta.validation.ValidationException;
+import med.voll.api.domain.consultation.DeleteValidations.DeleteConsultValidator;
 import med.voll.api.domain.consultation.Validations.ConsultValidator;
 import med.voll.api.domain.doctor.Doctor;
 import med.voll.api.domain.doctor.DoctorRepository;
@@ -28,6 +29,9 @@ public class ConsultationService {
     @Autowired
     List<ConsultValidator> validations;
 
+    @Autowired
+    List<DeleteConsultValidator> deleteValidations;
+
 
     public Consultation save(ConsultationDTO consultationDTO){
 
@@ -48,10 +52,26 @@ public class ConsultationService {
 
         validations.forEach(v-> v.validate(consult));
 
-        Consultation consultation=consultationRepository.save(new Consultation(null,doctor.get(),patient.get(),consultationDTO.consultationDate()));
+        Consultation consultation=new Consultation(doctor.get(),patient.get(),consult.consultationDate());
 
         return consultationRepository.save(consultation);
     }
+
+
+    public void delete(ConsultationCancelDTO consultationCancelDTO){
+
+        deleteValidations.forEach(v -> v.validate(consultationCancelDTO));
+        var consultation=consultationRepository.getReferenceById(consultationCancelDTO.id());
+        consultation.cancel(false,consultationCancelDTO.reason());
+
+    }
+
+
+//    public void delete(Long id){
+//        deleteValidations.forEach(v -> v.validate(id));
+//        var consultation=consultationRepository.findById(id);
+//        consultationRepository.delete(consultation.get());
+//    }
 
 
     private Optional<Doctor> selectDoctor(ConsultationDTO consultationDTO){

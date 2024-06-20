@@ -24,6 +24,7 @@ public interface DoctorRepository extends JpaRepository<Doctor, Long> {
         AND d.id NOT IN(
         SELECT c.doctor.id FROM Consultation c
         WHERE c.consultationDate=:date
+        AND c.active=true
         )
         ORDER BY RAND()
         LIMIT 1
