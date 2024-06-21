@@ -33,8 +33,7 @@ public class ConsultationService {
     List<DeleteConsultValidator> deleteValidations;
 
 
-    public Consultation save(ConsultationDTO consultationDTO){
-
+    public DetailConsultationDTO save(ConsultationDTO consultationDTO){
         Optional<Patient> patient=patientRepository.findByIdAndActiveIsTrue(consultationDTO.patientId());
         Optional<Doctor> doctor = doctorRepository.findByIdAndActiveIsTrue(consultationDTO.doctorId());
 
@@ -53,8 +52,10 @@ public class ConsultationService {
         validations.forEach(v-> v.validate(consult));
 
         Consultation consultation=new Consultation(doctor.get(),patient.get(),consult.consultationDate());
+        consultationRepository.save(consultation);
 
-        return consultationRepository.save(consultation);
+        DetailConsultationDTO detailConsultationDTO=new DetailConsultationDTO(consultation.getId(),consultation.getDoctor().getId(),consultation.getPatient().getId(),consultation.getConsultationDate());
+        return detailConsultationDTO;
     }
 
 

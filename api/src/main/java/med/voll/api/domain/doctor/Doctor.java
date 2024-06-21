@@ -38,7 +38,6 @@ public class Doctor {
         this.address=new Address(dataDoctor.address());
     }
 
-
     public void update(DoctorUpdateDTO dataDoctor){
 
         if(dataDoctor.name() != null){
