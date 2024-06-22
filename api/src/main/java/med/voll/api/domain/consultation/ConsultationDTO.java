@@ -19,5 +19,4 @@ public record ConsultationDTO(
         @NotNull
         LocalDateTime consultationDate
 ) {
-
 }

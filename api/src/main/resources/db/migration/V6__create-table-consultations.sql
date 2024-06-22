@@ -2,7 +2,8 @@ CREATE TABLE consultations(
     id BIGINT NOT NULL  AUTO_INCREMENT,
     doctor_id BIGINT NOT NULL,
     patient_id BIGINT NOT NULL,
-
+    active TINYINT ,
+    reason VARCHAR(100),
     consultation_date DATETIME,
 
 
