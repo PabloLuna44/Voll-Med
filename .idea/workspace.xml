@@ -25,6 +25,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="20" />
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -33,40 +37,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.ConsultationControllerTest.executor": "Run",
-    "JUnit.ConsultationControllerTest.saveStatus200.executor": "Run",
-    "JUnit.ConsultationControllerTest.saveTest1.executor": "Run",
-    "JUnit.DoctorRepositoryTest.executor": "Run",
-    "JUnit.DoctorRepositoryTest.findDoctorWithSpecialtyInDate.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.ApiApplication.executor": "Run",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "DocumentTestAndPrepareAnAPIForDeployment",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Users/Hp Laptop/Desktop/Oracle One/api/api/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.ConsultationControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsultationControllerTest.saveStatus200.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConsultationControllerTest.saveTest1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DoctorRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DoctorRepositoryTest.findDoctorWithSpecialtyInDate.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.med.voll.api in api.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.api [package].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ApiApplication.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;DocumentTestAndPrepareAnAPIForDeployment&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Users/Hp Laptop/Desktop/Oracle One/api&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
-      "MySQL"
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
+      &quot;MySQL&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="med.voll.api.infra.security" />
@@ -87,7 +94,7 @@
       <recent name="med.voll.api.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.med.voll.api in api">
+  <component name="RunManager" selected="Spring Boot.ApiApplication">
     <configuration name="ConsultationControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="api" />
       <extension name="coverage">
@@ -165,6 +172,7 @@
       </method>
     </configuration>
     <configuration name="ApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="dev" />
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="med.voll.api.ApiApplication" />
@@ -172,6 +180,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.ConsultationControllerTest" />
+      <item itemvalue="JUnit.ConsultationControllerTest.saveStatus200" />
+      <item itemvalue="JUnit.ConsultationControllerTest.saveTest1" />
+      <item itemvalue="JUnit.DoctorRepositoryTest" />
+      <item itemvalue="JUnit.med.voll.api in api" />
+      <item itemvalue="Spring Boot.ApiApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.med.voll.api in api" />
@@ -218,7 +234,20 @@
       <workItem from="1718871510237" duration="197000" />
       <workItem from="1718907635933" duration="12706000" />
       <workItem from="1718930007578" duration="3541000" />
-      <workItem from="1718944539291" duration="10007000" />
+      <workItem from="1718944539291" duration="11395000" />
+      <workItem from="1718959245168" duration="2397000" />
+      <workItem from="1719010856463" duration="1836000" />
+      <workItem from="1719013600431" duration="939000" />
+      <workItem from="1719014551065" duration="246000" />
+      <workItem from="1719014852929" duration="10000" />
+      <workItem from="1719015198435" duration="740000" />
+      <workItem from="1719016381150" duration="1454000" />
+      <workItem from="1719017868084" duration="1727000" />
+      <workItem from="1719019699875" duration="979000" />
+      <workItem from="1719020704821" duration="5059000" />
+      <workItem from="1719026446252" duration="2330000" />
+      <workItem from="1719091568900" duration="2274000" />
+      <workItem from="1719774926008" duration="85000" />
     </task>
     <servers />
   </component>
